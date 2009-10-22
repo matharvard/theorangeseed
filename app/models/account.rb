@@ -1,3 +1,5 @@
+require 'digest/sha1'
+
 class Account < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation
   attr_accessor :password, :password_confirmation
