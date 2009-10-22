@@ -6,13 +6,6 @@ set :use_sudo, false
 
 set :deploy_to, "/var/www/#{application}"
 
-# If you aren't deploying to /u/apps/#{application} on the target
-# servers (which is the default), you can specify the actual location
-# via the :deploy_to variable:
-# set :deploy_to, "/var/www/#{application}"
-
-# If you aren't using Subversion to manage your source code, specify
-# your SCM below:
 set :scm, :git
 set :user, "deploy"
 
@@ -29,8 +22,9 @@ namespace :deploy do
   desc "Symlink extra configs and folders."
   task :symlink_extras do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/public/assets #{release_path}/public/assets"
   end
 end
 
-after "deploy", "deploy:cleanup" # keeps only last 5 releases
+after "deploy", "deploy:cleanup"
 after "deploy", "deploy:symlink_extras"
