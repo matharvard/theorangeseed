@@ -1,0 +1,8 @@
+<% div_for(quote, :class => "post") do %>
+  <%= permalink_for(quote) %>
+  <blockquote><span>&ldquo;</span><%= quote.body %><span>&rdquo;</span></blockquote>
+  
+  <div class="body">
+    <%= quote.source %>
+  </div>
+<% end %>

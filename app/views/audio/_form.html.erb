@@ -1,0 +1,17 @@
+<%= error_messages_for :audio %>
+
+<% form_for(@audio, :url => audio_index_path, :html => { :multipart => true }) do |form| %>
+  <div class="field file_field">
+    <%= form.label :attachment, "MP3 File" %>
+    <%= form.file_field :attachment %>
+  </div>
+  
+  <div class="field text_area">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit "Save" %>
+  </div>
+<% end %>

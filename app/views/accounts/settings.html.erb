@@ -1,0 +1,14 @@
+<%= error_messages_for :account %>
+
+<% form_for(@account, :url => account_path) do |form| %>
+  <div class="field text_field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit "Save" %>
+  </div>
+<% end %>
+
+<%= link_to "Change password", password_account_path %>

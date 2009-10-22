@@ -1,0 +1,17 @@
+<%= error_messages_for :photo %>
+
+<% form_for(@photo, :html => { :multipart => true }) do |form| %>
+  <div class="field file_field">
+    <%= form.label :attachment, "Photo" %>
+    <%= form.file_field :attachment %>
+  </div>
+  
+  <div class="field text_area">
+    <%= form.label :caption %>
+    <%= form.text_area :caption %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit "Save" %>
+  </div>
+<% end %>

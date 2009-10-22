@@ -1,0 +1,17 @@
+<%= error_messages_for :video %>
+
+<% form_for(@video) do |form| %>
+  <div class="field text_area">
+    <%= form.label :embed_code %>
+    <%= form.text_area :embed_code %>
+  </div>
+  
+  <div class="field text_area">
+    <%= form.label :caption %>
+    <%= form.text_area :caption %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit "Save" %>
+  </div>
+<% end %>

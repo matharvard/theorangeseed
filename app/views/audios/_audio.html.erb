@@ -1,0 +1,18 @@
+<% div_for(audio, :class => "post") do %>
+  <%= permalink_for(audio) %>
+  <div class="player">
+    <embed
+    src='/player.swf'
+    width='400'
+    height='19'
+    bgcolor='undefined'
+    allowscriptaccess='always'
+    allowfullscreen='true'
+    flashvars='file=<%= audio.attachment.url(:none, false) %>&backcolor=#000000&frontcolor=#ffffff&lightcolor=#ffffff&screencolor=#ffffff'
+    />
+  </div>
+  
+  <div class="body">
+    <%= audio.description %>
+  </div>
+<% end %>

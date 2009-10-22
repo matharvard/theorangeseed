@@ -1,0 +1,426 @@
+/* RESET ------------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+body                    { line-height:1; }
+ol, ul                  { list-style:none; }
+blockquote, q           { quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+/* :focus                  { outline:0; } */
+ins                     { text-decoration:none; }
+del                     { text-decoration:line-through; }
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* BASE -------------------------------------------------------------------- */
+body {
+  background:#fff;
+  color:#222;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:14px;
+  line-height:21px;
+}
+
+a,
+a:visited {
+  color:#39c;
+  text-decoration:none;
+}
+
+a:focus,
+a:hover {
+  color:#069;
+}
+
+a:active {
+  color:#036;
+}
+
+#container {
+  width:550px;
+  margin:0 auto;
+}
+
+#header,
+#main,
+#footer {
+  width:550px;
+  background:#fff;
+}
+
+/* HEADER ------------------------------------------------------------------ */
+#header {
+  padding:21px 0 20px 0; /* Compensate for 1px border-bottom */
+  border-bottom:1px solid #ccc;
+}
+
+#header h1 {
+  font-size:36px;
+  line-height:42px;
+  margin:21px 0;
+  text-align:center;
+}
+
+#header h1 a,
+#header h1 a:visited,
+#header h1 a:focus,
+#header h1 a:hover,
+#header h1 a:active {
+  color:#000;
+  text-decoration:none;
+  text-transform:lowercase;
+  letter-spacing:-2px;
+}
+
+/* CONTENT ----------------------------------------------------------------- */
+#content {
+  margin:21px 0;
+  float:left;
+  width:400px;
+}
+
+/* FOOTER ------------------------------------------------------------------ */
+#footer {
+  padding:20px 0 21px 0;
+  border-top:1px solid #ccc; /* Compensate for 1px border-top */
+  clear:both;
+}
+
+#footer p {
+  font-size:12px;
+  line-height:21px;
+  color:#666;
+  text-align:center;
+}
+
+/* RAILS ------------------------------------------------------------------- */
+#flash {
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  text-align:center;
+  font-size:14px;
+  line-height:42px;
+  color:#fff;
+  text-shadow:1px 1px 1px #666;
+}
+
+#flash p {
+  margin:42px 0;
+}
+
+.notice {
+  background:rgba(255, 153, 0, 0.95);
+}
+
+.error {
+  background:rgba(204, 0, 0, 0.95);
+}
+
+#errorExplanation {
+  margin:21px 0;
+}
+
+#errorExplanation h2 {
+  font-style:italic;
+  font-family:Georgia, Times, serif;
+  font-weight:normal;
+  font-size:18px;
+  line-height:21px;
+  margin:21px 0;
+}
+
+#errorExplanation p {
+  color:#666;
+  font-size:14px;
+  line-height:21px;
+}
+
+#errorExplanation ul {
+  margin:21px 0;
+}
+
+#errorExplanation ul li {
+  font-size:14px;
+  line-height:21px;
+  list-style:square;
+  margin-left:21px;
+}
+
+/* FORMS ------------------------------------------------------------------- */
+form {
+  
+}
+
+form .field {
+  
+}
+
+form label {
+  display:block;
+  font-weight:bold;
+  color:#333;
+  font-size:11px;
+  line-height:21px;
+}
+
+form .text_field {
+  
+}
+
+form .text_field input {
+  background:#fff;
+  color:#666;
+  border-top:1px solid #707070;
+  border-right:1px solid #ababab;
+  border-bottom:1px solid #cecece;
+  border-left:1px solid #ababab;
+  font-size:14px;
+  line-height:14px;
+  margin:3px 0;
+  font-family:Monaco, mono-space;
+  width:100%;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+}
+
+form .text_area {
+  
+}
+
+form .text_area textarea {
+  background:#fff;
+  color:#666;
+  border-top:1px solid #707070;
+  border-right:1px solid #ababab;
+  border-bottom:1px solid #cecece;
+  border-left:1px solid #ababab;
+  font-size:14px;
+  line-height:21px;
+  font-family:Monaco, mono-space;
+  width:100%;
+  height:168px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+}
+
+form .actions {
+  margin:23px 0;
+  padding-top:20px; /* Compensate for 1px border-top */
+  border-top:1px solid #eee;
+}
+
+.actions input {
+  font:inherit;
+  background-color:transparent;
+  padding:0;
+  border:none;
+  -webkit-appearance:none;
+}
+
+.actions input {
+  background:#333;
+  color:#fff;
+  font-weight:bold;
+  font-size:11px;
+  line-height:21px;
+  padding:0 14px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  cursor:pointer;
+}
+
+.actions input:hover {
+  background:#989898;
+}
+
+/* POSTS ------------------------------------------------------------------- */
+.day {
+  width:400px;
+  position:relative;
+  left:150px;
+}
+
+.date {
+  width:150px;
+  position:absolute;
+  margin-left:-150px;
+}
+
+.date .d {
+  font-size:42px;
+  line-height:42px;
+  color:#f90;
+}
+
+.date .a {
+  color:#ccc;
+}
+
+.post {
+  position:relative;
+  margin-bottom:20px;
+  border-bottom:1px solid #ccc;
+}
+
+.post .permalink {
+  position:absolute;
+  top:0;
+  left:-21px;
+  font-size:21px;
+  line-height:21px;
+  font-weight:bold;
+}
+
+/* ARTICLES ---------------------------------------------------------------- */
+.article {
+  
+}
+
+.article .title {
+  font-size:18px;
+  line-height:21px;
+  margin-bottom:21px;
+}
+
+.article .body {
+  margin-bottom:21px;
+}
+
+/* LINKS ------------------------------------------------------------------- */
+.link {
+  
+}
+
+.link .title {
+  font-size:18px;
+  line-height:21px;
+  margin-bottom:21px;
+}
+
+.link .body {
+  margin-bottom:21px;
+}
+
+/* PHOTOS ------------------------------------------------------------------ */
+.photo {
+  
+}
+
+.photo img {
+  margin-bottom:21px;
+}
+
+.photo .body {
+  margin-bottom:21px;
+}
+
+/* SNIPPET ----------------------------------------------------------------- */
+.snippet {
+  
+}
+
+.snippet .title {
+  font-size:18px;
+  line-height:21px;
+  margin-bottom:21px;
+}
+
+.snippet .body {
+  margin-bottom:21px;
+}
+
+.snippet .body pre code {
+  display:block;
+  font-family:monospace, Arial, sans-serif;
+  font-size:14px;
+  line-height:21px;
+  background:#eee;
+  color:#666;
+  padding:21px;
+  overflow:auto;
+  -webkit-border-radius:7px;
+  -moz-border-radius:7px;
+  border-radius:7px;
+}
+
+/* QUOTE ------------------------------------------------------------------- */
+.quote {
+  
+}
+
+.quote blockquote {
+  display:block;
+  font-size:18px;
+  line-height:21px;
+  margin-bottom:21px;
+  color:#666;
+}
+
+.quote blockquote span {
+  font-size:21px;
+  font-weight:bold;
+  color:#222;
+}
+
+.quote .body {
+  margin-bottom:21px;
+}
+
+/* VIDEO ------------------------------------------------------------------- */
+.video {
+  
+}
+
+.video .player {
+  margin-bottom:21px;
+}
+
+.video .body {
+  margin-bottom:21px;
+}
+
+/* AUDIO ------------------------------------------------------------------- */
+.audio {
+  
+}
+
+.audio .player {
+  margin-bottom:21px;
+}
+
+.audio .body {
+  margin-bottom:21px;
+}
+
+/* CHAT -------------------------------------------------------------------- */
+.chat {
+  
+}
+
+.chat .title {
+  font-size:18px;
+  line-height:21px;
+  margin-bottom:21px;
+}
+
+.chat .body {
+  margin-bottom:21px;
+}

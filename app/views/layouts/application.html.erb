@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>The Orange Seed</title>
+    <%= stylesheet_link_tag "theorangeseed", :cache => true %>
+    <%= javascript_include_tag :all, :cache => true %>
+  </head>
+  <body>
+    <% flash.each do |key, message| %>
+      <% content_tag :div, :id => "flash", :class => key, :style => "display:none" do %>
+        <p><%= message %></p>
+      <% end %>
+    <% end %>
+    
+    <div id="container">
+      <div id="header">
+        <h1><%= link_to "The Orange Seed", root_path %></h1>
+      </div> <!-- end#header -->
+      
+      <div id="content">
+        <%= yield %>
+      </div> <!-- end#content -->
+      
+      <div id="footer">
+        <p>&copy; 2009 Mat Harvard, Sunny Hundal and Richard Neary</p>
+        
+        <% if signed_in? %>
+          <h3>Admin:</h3>
+          <ul>
+            <li><%= link_to "Settings", settings_account_path %></li>
+            <li><%= link_to "Sign out", sign_out_path %></li>
+          </ul>
+          
+          <h3>Write a new:</h3>
+          <ul>
+            <li><%= link_to "Article", new_article_path %></li>
+            <li><%= link_to "Audio", new_audio_path %></li>
+            <li><%= link_to "Chat", new_chat_path %></li>
+            <li><%= link_to "Links", new_link_path %></li>
+            <li><%= link_to "Photos", new_photo_path %></li>
+            <li><%= link_to "Quotes", new_quote_path %></li>
+            <li><%= link_to "Snippet", new_snippet_path %></li>
+            <li><%= link_to "Video", new_video_path %></li>
+          </ul>
+        <% end %>
+      </div> <!-- end#footer -->
+    </div> <!-- end#container -->
+  </body>
+</html>

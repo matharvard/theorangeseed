@@ -1,0 +1,10 @@
+<% div_for(snippet, :class => "post") do %>
+  <%= permalink_for(snippet) %>
+  <% unless snippet.title.blank? %>
+    <h3 class="title"><%= snippet.title %></h3>
+  <% end %>
+  
+  <div class="body">
+    <pre><code><%= h(snippet.code) %></code></pre>
+  </div>
+<% end %>

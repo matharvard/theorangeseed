@@ -1,0 +1,17 @@
+<%= error_messages_for :quote %>
+
+<% form_for(@quote) do |form| %>
+  <div class="field text_area">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+  
+  <div class="field text_area">
+    <%= form.label :source %>
+    <%= form.text_area :source %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit "Save" %>
+  </div>
+<% end %>

@@ -1,0 +1,12 @@
+<% @posts.each do |day, posts| %>
+  <div class="day">
+    <h2 class="date">
+      <span class="d"><%= day.strftime("%d") %></span>
+      <span class="a"><%= day.strftime("%a") %></span>
+    </h2>
+    
+    <% posts.each do |post| %>
+      <%= render post %>
+    <% end %>
+  </div>
+<% end %>

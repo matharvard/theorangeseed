@@ -1,0 +1,17 @@
+<%= error_messages_for :article %>
+
+<% form_for(@article) do |form| %>
+  <div class="field text_field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  
+  <div class="field text_area">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit "Save" %>
+  </div>
+<% end %>

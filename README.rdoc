@@ -1,0 +1,7 @@
+= The Orange Seed
+
+A tumblelog by Mat Harvard.
+
+== Getting Started
+
+1. Make it work.

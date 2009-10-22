@@ -1,0 +1,22 @@
+<%= error_messages_for :link %>
+
+<% form_for(@link) do |form| %>
+  <div class="field text_field">
+    <%= form.label :url, "URL" %>
+    <%= form.text_field :url %>
+  </div>
+  
+  <div class="field text_field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  
+  <div class="field text_area">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit "Save" %>
+  </div>
+<% end %>
