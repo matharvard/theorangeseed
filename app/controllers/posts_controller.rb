@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.find(:all, :limit => 25).group_by(&:day)
+    
+    respond_to do |format|
+      format.html
+      format.xml
+    end
   end
   
   def show
