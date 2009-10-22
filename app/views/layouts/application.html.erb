@@ -5,7 +5,7 @@
     <title>The Orange Seed</title>
     <%= stylesheet_link_tag "theorangeseed", :cache => true %>
     <%= javascript_include_tag :all, :cache => true %>
-    <%= auto_discovery_link_tag :rss, posts_url(:xml, :format => :rss) %>
+    <%= auto_discovery_link_tag :rss, posts_url(:format => :xml) %>
   </head>
   <body>
     <% flash.each do |key, message| %>
