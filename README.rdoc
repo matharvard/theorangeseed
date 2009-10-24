@@ -1,7 +1,17 @@
 = The Orange Seed
 
-A tumblelog by Mat Harvard.
+A tumblelog engine written with Ruby on Rails
 
-== Getting Started
+== Making it Work
 
-1. Make it work.
+1. Create <tt>log/</tt> and <tt>tmp/</tt> directories
+2. Edit <tt>config/database.yml</tt>
+3. Run <tt>rake db:schema:load</tt>
+4. Run <tt>rake db:seed</tt>
+5. Go to <tt>/sign_in</tt> and sign in with username: admin@theorangeseed.com and password: admin
+
+== To Dos
+
+* Better admin navigation (at the bottom if you don't see it)
+* New design
+* More post management stuff (edit & delete)
