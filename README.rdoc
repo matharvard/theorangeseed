@@ -6,7 +6,7 @@ A tumblelog engine written with Ruby on Rails
 
 1. Create <tt>log/</tt> and <tt>tmp/</tt> directories
 2. Edit <tt>config/database.yml</tt>
-3. Edit the Google Analytics code in <tt>app/views/application.html.erb</tt> (or just remove it all together)
+3. Edit the Google Analytics code in <tt>app/views/layouts/application.html.erb</tt> (or just remove it all together)
 4. Run <tt>rake db:schema:load</tt>
 5. Run <tt>rake db:seed</tt>
 6. Go to <tt>/sign_in</tt> and sign in with username: admin@theorangeseed.com and password: admin
