@@ -1,6 +1,6 @@
 = The Orange Seed
 
-A tumblelog engine written with Ruby on Rails
+A tumblelog engine written with Ruby on Rails.
 
 == Making it Work
 
