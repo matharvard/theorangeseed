@@ -1,5 +1,6 @@
 <% div_for(chat, :class => "post") do %>
   <%= permalink_for(chat) %>
+  <%= manage_links_for(chat) %>
   <h3 class="title"><%= chat.title %></h3>
   
   <div class="body">

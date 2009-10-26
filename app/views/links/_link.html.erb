@@ -1,5 +1,6 @@
 <% div_for(link, :class => "post") do %>
   <%= permalink_for(link) %>
+  <%= manage_links_for(link) %>
   <h3 class="title">
     <%= link.title.blank? ? link_to(link.url, link.url) : link_to(link.title, link.url) %>
   </h3>

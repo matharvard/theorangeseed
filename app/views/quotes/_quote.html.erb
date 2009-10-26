@@ -1,5 +1,6 @@
 <% div_for(quote, :class => "post") do %>
   <%= permalink_for(quote) %>
+  <%= manage_links_for(quote) %>
   <blockquote><span>&ldquo;</span><%= quote.body %><span>&rdquo;</span></blockquote>
   
   <div class="body">

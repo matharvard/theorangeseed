@@ -1,5 +1,6 @@
 <% div_for(snippet, :class => "post") do %>
   <%= permalink_for(snippet) %>
+  <%= manage_links_for(snippet) %>
   <% unless snippet.title.blank? %>
     <h3 class="title"><%= snippet.title %></h3>
   <% end %>

@@ -1,5 +1,6 @@
 <% div_for(video, :class => "post") do %>
   <%= permalink_for(video) %>
+  <%= manage_links_for(video) %>
   <div class="player">
     <%= video.embed_code %>
   </div>

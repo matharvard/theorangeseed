@@ -1,5 +1,6 @@
 <% div_for(photo, :class => "post") do %>
   <%= permalink_for(photo) %>
+  <%= manage_links_for(photo) %>
   <%= image_tag(photo.attachment.url(:resized)) %>
   
   <% unless photo.caption.blank? %>
