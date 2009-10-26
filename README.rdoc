@@ -13,6 +13,5 @@ A tumblelog engine written with Ruby on Rails.
 
 == To Dos
 
-* Better admin navigation (at the bottom if you don't see it)
-* New design
-* More post management stuff (edit & delete)
+- Better admin navigation (at the bottom if you don't see it)
+- New design

@@ -1,0 +1,1 @@
+- Added "edit" and "delete" buttons to each post, visible if signed in.
